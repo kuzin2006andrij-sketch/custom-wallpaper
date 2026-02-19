@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kuzin2006andrij-sketch.github.io/custom-wallpaper/sitemap.xml
