@@ -4,169 +4,359 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Custom Wallpaper — Живые футуристические обои</title>
+<title>Custom Wallpaper — живые футуристические обои для Windows 10/11</title>
 
-<meta name="description" content="Живые футуристические и киберпанк обои для Windows 10 и 11. Умные live wallpaper с HUD интерфейсом.">
-<meta name="keywords" content="живые обои windows 11, футуристические обои, киберпанк обои, умные обои, live wallpaper windows 10">
+<meta name="description" content="Custom Wallpaper — живые футуристические и киберпанк обои для Windows 10/11. Скачать приложение через Telegram или Google Drive. Вечная лицензия 200 грн / $5 / 250 ⭐.">
+<meta name="keywords" content="живые обои windows 11, живые обои windows 10, футуристические обои, киберпанк обои, умные обои, live wallpaper windows">
 <meta name="author" content="Custom Wallpaper">
 
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" href="favicon.png">
 
-<meta property="og:title" content="Custom Wallpaper — Живые футуристические обои">
-<meta property="og:description" content="Киберпанк и умные живые обои для Windows 10 / 11">
+<meta property="og:title" content="Custom Wallpaper — живые футуристические обои">
+<meta property="og:description" content="Живые обои (видео), HUD-стиль, Windows 10/11. Скачать через Telegram или Google Drive.">
 <meta property="og:image" content="https://kuzin2006andrij-sketch.github.io/custom-wallpaper/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kuzin2006andrij-sketch.github.io/custom-wallpaper/">
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
-    color: white;
-    text-align: center;
-}
+  :root{
+    --bg:#050a18;
+    --card:rgba(255,255,255,0.06);
+    --line:rgba(0,240,255,0.18);
+    --text:#ffffff;
+    --muted:rgba(255,255,255,0.78);
+    --accent:#00eaff;
+    --accent2:#ff00c8;
+    --shadow:0 0 40px rgba(0,255,255,0.18);
+    --r:20px;
+  }
 
-header {
-    padding: 60px 20px;
-}
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background: radial-gradient(circle at top, #0b1b2c, #070a16 60%, #050713);
+    color:var(--text);
+    overflow-x:hidden;
+  }
 
-h1 {
-    font-size: 48px;
-}
+  /* animated glow background */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:-20%;
+    background:
+      radial-gradient(circle at 25% 25%, rgba(0,234,255,0.16), transparent 45%),
+      radial-gradient(circle at 75% 70%, rgba(255,0,200,0.12), transparent 50%),
+      radial-gradient(circle at 55% 30%, rgba(0,120,255,0.12), transparent 55%);
+    animation: bgMove 10s ease-in-out infinite alternate;
+    z-index:-2;
+  }
+  @keyframes bgMove{
+    0%{transform:translate(0,0) scale(1);}
+    100%{transform:translate(-40px,-30px) scale(1.02);}
+  }
 
-.button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 15px 35px;
-    font-size: 18px;
-    background: linear-gradient(45deg, #00f2ff, #ff00c8);
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: 0.3s;
-}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 18px;}
+  .nav{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(10px);
+    background:linear-gradient(to bottom, rgba(5,7,18,0.85), rgba(5,7,18,0.55));
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:14px;}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);}
+  .logo{
+    width:34px;height:34px;border-radius:12px;
+    border:1px solid rgba(0,234,255,0.55);
+    background: radial-gradient(circle at 30% 30%, rgba(0,234,255,0.75), transparent 55%),
+                radial-gradient(circle at 70% 70%, rgba(255,0,200,0.55), transparent 55%),
+                rgba(255,255,255,0.05);
+    box-shadow:0 0 0 1px rgba(255,0,200,0.12) inset;
+  }
+  .brand strong{font-size:14px;letter-spacing:0.3px;}
+  .brand span{display:block;font-size:12px;color:rgba(255,255,255,0.62);}
+  .nav-links{display:flex;gap:10px;flex-wrap:wrap}
+  .pill{
+    padding:8px 12px;border-radius:999px;
+    border:1px solid rgba(0,234,255,0.30);
+    background:rgba(255,255,255,0.04);
+    color:rgba(255,255,255,0.80);
+    text-decoration:none;
+    font-size:13px;
+  }
+  .pill:hover{border-color:rgba(0,234,255,0.65);color:var(--text)}
 
-.button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 25px #00f2ff;
-}
+  header{padding:70px 0 30px;text-align:center;}
+  h1{
+    margin:0 0 10px;
+    font-size:46px;
+    background:linear-gradient(90deg,var(--accent),#007bff,var(--accent2));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    letter-spacing:-0.5px;
+  }
+  .subtitle{margin:0 auto 18px;max-width:820px;color:var(--muted);font-size:18px;line-height:1.5;}
+  .badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px;}
+  .badge{
+    font-size:12px;padding:8px 12px;border-radius:999px;
+    border:1px solid rgba(0,234,255,0.22);
+    background:rgba(0,0,0,0.18);
+    color:rgba(255,255,255,0.78);
+  }
 
-.video-section {
-    margin: 80px 20px;
-}
+  .cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:18px;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:14px 22px;border-radius:14px;
+    text-decoration:none;font-weight:bold;
+    border:1px solid rgba(0,234,255,0.35);
+    background:rgba(255,255,255,0.05);
+    color:var(--text);
+    transition:0.25s;
+    box-shadow:0 0 0 1px rgba(255,0,200,0.10) inset;
+  }
+  .btn.primary{
+    background:linear-gradient(45deg, rgba(0,234,255,0.95), rgba(255,0,200,0.80));
+    border-color:transparent;
+    color:#071018;
+    box-shadow:0 0 30px rgba(0,234,255,0.25);
+  }
+  .btn:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 0 45px rgba(0,234,255,0.25);}
 
-iframe {
-    width: 90%;
-    max-width: 900px;
-    height: 500px;
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(0,255,255,0.5);
-}
+  .grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:18px;
+    align-items:stretch;
+    margin-top:18px;
+  }
+  @media(max-width:960px){.grid{grid-template-columns:1fr}}
+  .card{
+    border-radius:var(--r);
+    background:var(--card);
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .pad{padding:22px;}
+  .h2{margin:0 0 12px;color:var(--accent);font-size:20px;}
+  .text{margin:0;color:var(--muted);font-size:15px;line-height:1.6;}
 
-/* СКРИНШОТЫ */
+  /* video */
+  .video{
+    position:relative;
+    padding-bottom:56.25%;
+    height:0;
+    overflow:hidden;
+    border-radius:var(--r);
+    border:1px solid rgba(0,234,255,0.22);
+    box-shadow:0 0 40px rgba(0,255,255,0.22);
+  }
+  .video iframe{
+    position:absolute;inset:0;width:100%;height:100%;border:0;
+  }
 
-.gallery {
-    margin: 80px 20px;
-}
+  /* pricing */
+  .price{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:12px;
+  }
+  @media(max-width:960px){.price{grid-template-columns:1fr}}
+  .plan{
+    border-radius:18px;
+    border:1px solid rgba(0,234,255,0.20);
+    background:rgba(0,0,0,0.18);
+    padding:16px;
+  }
+  .plan h3{margin:0 0 6px;font-size:16px;}
+  .money{font-size:26px;font-weight:800;}
+  .plan p{margin:8px 0 0;color:rgba(255,255,255,0.72);font-size:13px;line-height:1.5;}
 
-.gallery h2 {
-    margin-bottom: 40px;
-}
+  /* gallery */
+  .gallery{margin:60px 0 10px;}
+  .shots{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+  }
+  @media(max-width:960px){.shots{grid-template-columns:1fr 1fr}}
+  @media(max-width:600px){.shots{grid-template-columns:1fr}}
+  .shot{
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid rgba(0,234,255,0.20);
+    background:rgba(0,0,0,0.18);
+    box-shadow:0 0 30px rgba(0,255,255,0.12);
+  }
+  .shot img{width:100%;height:auto;display:block;}
 
-.screenshots {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
+  .notice{
+    margin-top:14px;
+    padding:12px 14px;
+    border-radius:16px;
+    border:1px dashed rgba(0,234,255,0.30);
+    background:rgba(0,0,0,0.14);
+    color:rgba(255,255,255,0.78);
+    font-size:13px;
+    line-height:1.5;
+  }
 
-.screenshots img {
-    width: 300px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 0 30px rgba(0,255,255,0.3);
-}
+  footer{
+    margin-top:70px;
+    padding:40px 0 55px;
+    border-top:1px solid var(--line);
+    color:rgba(255,255,255,0.60);
+    font-size:13px;
+    text-align:center;
+  }
 
-.screenshots img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 40px rgba(255,0,200,0.6);
-}
-
-/* Lightbox */
-
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 20px;
-}
-
-footer {
-    margin-top: 100px;
-    padding: 40px;
-    background: rgba(0,0,0,0.5);
-    font-size: 14px;
-}
+  /* smooth scroll */
+  html{scroll-behavior:smooth}
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Custom Wallpaper</h1>
-    <p>Живые футуристические и киберпанк обои для Windows 10 / 11</p>
-    <a class="button" href="https://t.me/CustomWallpaperKeyBot" target="_blank">
-        Купить лицензию
+<div class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#">
+      <span class="logo" aria-hidden="true"></span>
+      <div>
+        <strong>Custom Wallpaper</strong>
+        <span>Windows 10 / 11 • Live Wallpapers</span>
+      </div>
     </a>
-</header>
-
-<section class="video-section">
-    <h2>Видео демонстрация</h2>
-    <iframe src="https://www.youtube.com/embed/wHx5GgTw1q8" frameborder="0" allowfullscreen></iframe>
-</section>
-
-<section class="gallery">
-    <h2>Скриншоты приложения</h2>
-
-    <div class="screenshots">
-        <img src="screen1.jpg" alt="Футуристические живые обои Windows" onclick="openLightbox(this)">
-        <img src="screen2.jpg" alt="Киберпанк обои для Windows 11" onclick="openLightbox(this)">
-        <img src="screen3.jpg" alt="Умные live wallpaper интерфейс HUD" onclick="openLightbox(this)">
+    <div class="nav-links">
+      <a class="pill" href="#video">Видео</a>
+      <a class="pill" href="#screens">Скриншоты</a>
+      <a class="pill" href="#download">Скачать</a>
+      <a class="pill" href="#pricing">Цена</a>
     </div>
-</section>
-
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img">
+  </div>
 </div>
 
-<footer>
-    © 2026 Custom Wallpaper | Live Wallpapers for Windows
-</footer>
+<div class="wrap">
+  <header>
+    <h1>Custom Wallpaper</h1>
+    <p class="subtitle">
+      Живые футуристические и киберпанк обои для Windows 10 / 11.
+      Видео-фон, HUD-стиль, минимальная нагрузка, быстрая установка.
+    </p>
 
-<script>
-function openLightbox(img) {
-    document.getElementById("lightbox").style.display = "flex";
-    document.getElementById("lightbox-img").src = img.src;
-}
+    <div class="cta" id="download">
+      <a class="btn primary" href="https://t.me/CustomWallpaperKeyBot" target="_blank" rel="noopener">
+        Скачать через Telegram
+      </a>
+      <a class="btn" href="#" title="Позже добавишь ссылку на Google Drive">
+        Скачать через Google Drive
+      </a>
+    </div>
 
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-}
-</script>
+    <div class="badges">
+      <span class="badge">Вечная лицензия: 200 грн / $5 / 250 ⭐</span>
+      <span class="badge">Минимальные требования</span>
+      <span class="badge">Windows 10 / 11</span>
+    </div>
+
+    <div class="notice">
+      🔹 Если хочешь — позже добавим отдельную страницу “Скачать” и красивые кнопки оплаты/покупки.<br>
+      🔹 Ссылку Google Drive ты вставишь позже — сейчас кнопка оставлена, чтобы структура была “как раньше”.
+    </div>
+  </header>
+
+  <section class="grid" id="video">
+    <div class="card pad">
+      <h2 class="h2">🎬 Видео демонстрация</h2>
+      <p class="text">Короткое видео: как выглядит интерфейс и живые обои в работе.</p>
+      <div style="height:14px"></div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/wHx5GgTw1q8"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="card pad">
+      <h2 class="h2">🚀 Возможности</h2>
+      <p class="text">
+        • Живые обои (видео фон)<br>
+        • HUD-стиль и футуристические панели<br>
+        • Киберпанк темы / sci-fi атмосфера<br>
+        • Минимальная нагрузка на систему<br>
+        • Быстрая установка и запуск
+      </p>
+
+      <div style="height:18px"></div>
+
+      <h2 class="h2" id="pricing">💳 Цена</h2>
+      <div class="price">
+        <div class="plan">
+          <h3>Украина</h3>
+          <div class="money">200 грн</div>
+          <p>Вечная лицензия</p>
+        </div>
+        <div class="plan">
+          <h3>Мир</h3>
+          <div class="money">$5</div>
+          <p>Вечная лицензия</p>
+        </div>
+        <div class="plan">
+          <h3>Telegram</h3>
+          <div class="money">250 ⭐</div>
+          <p>Покупка через бота</p>
+        </div>
+      </div>
+
+      <div class="cta" style="margin-top:14px">
+        <a class="btn primary" href="https://t.me/CustomWallpaperKeyBot" target="_blank" rel="noopener">
+          Перейти в Telegram-бота
+        </a>
+        <a class="btn" href="#screens">Посмотреть скриншоты</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="screens">
+    <div class="card pad">
+      <h2 class="h2">🖼 Скриншоты приложения</h2>
+      <p class="text">Скриншоты видны прямо на странице при прокрутке.</p>
+      <div style="height:16px"></div>
+
+      <div class="shots">
+        <div class="shot">
+          <img src="screen1.png" alt="Custom Wallpaper — живые футуристические обои Windows 10/11 (скриншот 1)">
+        </div>
+        <div class="shot">
+          <img src="screen2.png" alt="Custom Wallpaper — киберпанк HUD интерфейс (скриншот 2)">
+        </div>
+        <div class="shot">
+          <img src="screen3.png" alt="Custom Wallpaper — умные обои и панели (скриншот 3)">
+        </div>
+      </div>
+
+      <div class="notice" style="margin-top:16px">
+        ✅ PNG подходит. Если скрины тяжёлые — сделай ширину ~1200px, чтобы сайт грузился быстрее.
+      </div>
+
+      <div class="cta" style="margin-top:16px">
+        <a class="btn primary" href="https://t.me/CustomWallpaperKeyBot" target="_blank" rel="noopener">
+          Скачать через Telegram
+        </a>
+        <a class="btn" href="#" title="Позже вставишь ссылку на Google Drive">
+          Скачать через Google Drive
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Custom Wallpaper · Windows 10 / 11 · Live Wallpapers
+  </footer>
+</div>
 
 </body>
 </html>
